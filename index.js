@@ -1,13 +1,11 @@
-//<!-- <i class="fas fa-times"></i> for cross-->
-//<!-- <i class="far fa-circle"></i> for circle -->
-
-// $("#row1col1")[0].innerHTML= '<i class="fas fa-times fa-10x"></i>'
+// function to check winning pattern
 function checkWinner(id)
 {
+  // check winning pattern only if there are atleast 3 moves by atleast one player
   if (sequence > 4)
   {
      var icon = $(id)[0].firstChild.classList[0]
-
+     // check pattern by checking in all directions from current box. For.eg. for row 1 col 1 check horizontal, vertical and diagonal patterns hence three conditions
      if(id=="#row1col1")
      {
         if (( ($("#row1col2")[0].innerHTML.includes("</i>")) && ($("#row1col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ))
@@ -279,14 +277,12 @@ $(document).ready(function(){
       var result = checkWinner("#"+this.id);
       if (result === "Winner" && turn === 0)
       {
-        console.log("Player 2 wins");
         $("h1")[0].innerText = "Player 2 wins!!";
         Player2Count += 1;
         $(".right span")[0].innerHTML= Player2Count
       }
       else if (result === "Winner" && turn === 1)
       {
-        console.log("Player 1 wins");
         $("h1")[0].innerText = "Player 1 wins!!";
         Player1Count += 1;
         $(".left span")[0].innerHTML= Player1Count
@@ -325,7 +321,7 @@ $(document).ready(function(){
             }
         }, 2000);
       }
-        //check total turns and check for 5
-      });
 
-  });
+    });
+
+});
