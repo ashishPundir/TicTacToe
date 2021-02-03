@@ -12,14 +12,23 @@ function checkWinner(id)
      {
         if (( ($("#row1col2")[0].innerHTML.includes("</i>")) && ($("#row1col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ))
         {
+           $("#row1col1 i").addClass("winner");
+           $("#row1col2 i").addClass("winner");
+           $("#row1col3 i").addClass("winner");
            return "Winner";
         }
         else if (( ($("#row2col1")[0].innerHTML.includes("</i>")) && ($("#row2col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ))
         {
+           $("#row1col1 i").addClass("winner");
+           $("#row2col1 i").addClass("winner");
+           $("#row3col1 i").addClass("winner");
            return "Winner";
         }
         else if (( ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
         {
+           $("#row1col1 i").addClass("winner");
+           $("#row2col2 i").addClass("winner");
+           $("#row3col3 i").addClass("winner");
            return "Winner";
         }
         else
@@ -31,10 +40,16 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ))
        {
+          $("#row1col2 i").addClass("winner");
+          $("#row1col1 i").addClass("winner");
+          $("#row1col3 i").addClass("winner");
           return "Winner";
        }
        else if (( ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col2")[0].innerHTML.includes("</i>")) && ($("#row3col2")[0].firstChild.classList[0] === icon) ))
        {
+          $("#row1col2 i").addClass("winner");
+          $("#row2col2 i").addClass("winner");
+          $("#row3col2 i").addClass("winner");
           return "Winner";
        }
        else
@@ -46,15 +61,24 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row1col2")[0].innerHTML.includes("</i>")) && ($("#row1col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row1col3 i").addClass("winner");
+         $("#row1col1 i").addClass("winner");
+         $("#row1col2 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row2col3")[0].innerHTML.includes("</i>")) && ($("#row2col3")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row1col3 i").addClass("winner");
+         $("#row2col3 i").addClass("winner");
+         $("#row3col3 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row1col3 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         $("#row3col1 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -65,11 +89,17 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col1 i").addClass("winner");
+         $("#row1col1 i").addClass("winner");
+         $("#row3col1 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col3")[0].innerHTML.includes("</i>")) && ($("#row2col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col1 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         $("#row2col3 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -81,19 +111,31 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col2 i").addClass("winner");
+         $("#row1col1 i").addClass("winner");
+         $("#row3col3 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col2 i").addClass("winner");
+         $("#row1col3 i").addClass("winner");
+         $("#row3col1 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row2col1")[0].innerHTML.includes("</i>")) && ($("#row2col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col3")[0].innerHTML.includes("</i>")) && ($("#row2col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col2 i").addClass("winner");
+         $("#row2col1 i").addClass("winner");
+         $("#row2col3 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row1col2")[0].innerHTML.includes("</i>")) && ($("#row1col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col2")[0].innerHTML.includes("</i>")) && ($("#row3col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col2 i").addClass("winner");
+         $("#row1col2 i").addClass("winner");
+         $("#row3col2 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -105,11 +147,17 @@ function checkWinner(id)
      {
        if (( ($("#row2col1")[0].innerHTML.includes("</i>")) && ($("#row2col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col3 i").addClass("winner");
+         $("#row2col1 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row2col3 i").addClass("winner");
+         $("#row1col3 i").addClass("winner");
+         $("#row3col3 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -121,15 +169,24 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col1")[0].innerHTML.includes("</i>")) && ($("#row2col1")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col1 i").addClass("winner");
+         $("#row1col1 i").addClass("winner");
+         $("#row2col1 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row3col2")[0].innerHTML.includes("</i>")) && ($("#row3col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col1 i").addClass("winner");
+         $("#row3col2 i").addClass("winner");
+         $("#row3col3 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col1 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         $("#row1col3 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -141,11 +198,17 @@ function checkWinner(id)
      {
        if (( ($("#row1col2")[0].innerHTML.includes("</i>")) && ($("#row1col2")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col2 i").addClass("winner");
+         $("#row1col2 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col3")[0].innerHTML.includes("</i>")) && ($("#row3col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col2 i").addClass("winner");
+         $("#row3col1 i").addClass("winner");
+         $("#row3col3 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -157,15 +220,24 @@ function checkWinner(id)
      {
        if (( ($("#row1col1")[0].innerHTML.includes("</i>")) && ($("#row1col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col2")[0].innerHTML.includes("</i>")) && ($("#row2col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col3 i").addClass("winner");
+         $("#row1col1 i").addClass("winner");
+         $("#row2col2 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row3col1")[0].innerHTML.includes("</i>")) && ($("#row3col1")[0].firstChild.classList[0] === icon) ) && (  ($("#row3col2")[0].innerHTML.includes("</i>")) && ($("#row3col2")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col3 i").addClass("winner");
+         $("#row3col1 i").addClass("winner");
+         $("#row3col2 i").addClass("winner");
+         return "Winner";
        }
        else if (( ($("#row1col3")[0].innerHTML.includes("</i>")) && ($("#row1col3")[0].firstChild.classList[0] === icon) ) && (  ($("#row2col3")[0].innerHTML.includes("</i>")) && ($("#row2col3")[0].firstChild.classList[0] === icon) ))
        {
-          return "Winner";
+         $("#row3col3 i").addClass("winner");
+         $("#row1col3 i").addClass("winner");
+         $("#row2col3 i").addClass("winner");
+         return "Winner";
        }
        else
        {
@@ -237,7 +309,7 @@ $(document).ready(function(){
               $(block).first().removeClass("disableClick");
               $(block)[0].innerHTML="";
             }
-        }, 2000);
+        }, 2500);
       }
       else if (sequence ===10 && result === "noWinner")
       {
