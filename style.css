@@ -15,6 +15,24 @@ body
   margin: auto;
   text-align: center;
   margin-top: 5%;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .playArea
+  {
+    height:450px;
+    width:450px;
+    text-align: center;
+    margin-top: 10%;
+    clear: both;
+  }
+  .row
+  {
+    height:145px;
+    width:450px;
+    margin: 0px 10px;
+  }
 }
 
 .row
@@ -68,7 +86,8 @@ height: 100%;
   width:200px;
   height:100px;
   margin:auto;
-  margin-left:200px;
+  margin-left:5%;
+  margin-bottom:5%;
   background-image:url("images/cross.png");
   background-size: contain;
   padding-top: 20px;
@@ -79,7 +98,8 @@ height: 100%;
   width:200px;
   height:100px;
   margin:auto;
-  margin-right:200px;
+  margin-right:5%;
+  margin-bottom:5%;
   background-image:url("images/circle.png");
   background-size: contain;
   padding-top: 20px;
